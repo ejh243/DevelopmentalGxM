@@ -19,8 +19,8 @@ n_meth = len(meth)
 
 print n_meth, " DNA methylation sites read"
 
-start = range(0+350000,n_meth, step)
-stop = range(step+350000, n_meth, step)
+start = range(0,n_meth, step)
+stop = range(step, n_meth, step)
 stop = stop + [n_meth-1]
 
 print len(start), " sections to be processed"
