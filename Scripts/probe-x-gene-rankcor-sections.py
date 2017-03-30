@@ -7,10 +7,10 @@ import calculations as calc
 step = 10000
 
 ### these data are sorted so that indidivuals are in the same order
-methylation_matrix = "/mnt/data1/Helen/GExpxDNAm/Data/DNAm.csv" 
-rpkm_matrix = "/mnt/data1/Helen/GExpxDNAm/Data/GeneExp.csv"
+methylation_matrix = "/mnt/data1/Helen/GExpxDNAm/Data/DNAm_HYOX.csv" 
+rpkm_matrix = "/mnt/data1/Helen/GExpxDNAm/Data/GeneExp_2.csv"
 
-output = "/mnt/data1/Helen/GExpxDNAm/Output/Cor_GExp_DNAm_Matrix"
+output = "/mnt/data1/Helen/GExpxDNAm/Output/RankCor_GExp_HYOX_Matrix"
 
 # Methylation data
 meth = pd.read_csv(methylation_matrix, sep=",", header=0, index_col = 0,  na_values = "NA")
