@@ -7,10 +7,10 @@ import calculations as calc
 step = 10000
 
 ### these data are sorted so that indidivuals are in the same order
-methylation_matrix = "/mnt/data1/Helen/GExpxDNAm/Data/DNAm.csv" 
-rpkm_matrix = "/mnt/data1/Helen/GExpxDNAm/Data/GeneExp.csv"
+methylation_matrix = "/mnt/data1/Helen/GExpxDNAm/Data/DNAm_HYOX.csv" 
+rpkm_matrix = "/mnt/data1/Helen/GExpxDNAm/Data/GeneExp_2.csv"
 
-output = "/mnt/data1/Helen/GExpxDNAm/Output/Cor_GExp_DNAm_Matrix"
+output = "/mnt/data1/Helen/GExpxDNAm/Output/Cor_GExp_Hydroxy_Matrix"
 
 # Methylation data
 meth = pd.read_csv(methylation_matrix, sep=",", header=0, index_col = 0,  na_values = "NA")
@@ -19,8 +19,8 @@ n_meth = len(meth)
 
 print n_meth, " DNA methylation sites read"
 
-start = range(0+350000,n_meth, step)
-stop = range(step+350000, n_meth, step)
+start = range(0,n_meth, step)
+stop = range(step, n_meth, step)
 stop = stop + [n_meth-1]
 
 print len(start), " sections to be processed"
